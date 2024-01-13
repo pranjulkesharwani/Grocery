@@ -67,6 +67,7 @@ public class User {
     }
 
     // ##################################### Other Methods####################
+
     public void savePic(String fileName) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

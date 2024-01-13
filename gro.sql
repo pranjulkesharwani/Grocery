@@ -204,3 +204,17 @@ create table order_items
 -- ('Bharat', 91), ('USA', 1), ('China', 86), ('Russia', 7);
 
 --  ################################ Countries ############################
+
+
+-- Top offer
+create table top_offers
+(
+    top_offer_id int auto_increment primary key, 
+    image char(100) not null
+);
+
+alter table top_offers modify column image BLOB(500);
+
+insert into top_offers
+(image) values
+('top1.webp'), ('top2.webp'), ('top3.webp'), ('top4.webp');
