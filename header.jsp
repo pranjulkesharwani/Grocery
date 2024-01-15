@@ -77,18 +77,20 @@
     </style>
     <header>
         <div class="container-fluid">
-            <div class="row border">
-                <!-- <div class="col-1"></div> -->
-                <div class="col">
-                    <nav class="navbar navbar-expand-lg bg-light">
-                        <div class="container-fluid">
-                            <a class="navbar-brand text-success" href="index.do">
-                                <img src="static/images/logo.webp" alt="Logo" width="30" height="24"
-                                    class="d-inline-block align-text-top">
-                                Grocery
-                            </a>
-                            <div class="collapse navbar-collapse offset-1" id="navbarSupportedContent">
-                                <!-- <form class="d-flex" role="search">
+            <div class="container">
+
+                <div class=" border">
+                    <!-- <div class="col-1"></div> -->
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg bg-light">
+                            <div class="container-fluid">
+                                <a class="navbar-brand text-success" href="index.do">
+                                    <img src="static/images/logo.webp" alt="Logo" width="30" height="24"
+                                        class="d-inline-block align-text-top">
+                                    Grocery
+                                </a>
+                                <div class="collapse navbar-collapse offset-1" id="navbarSupportedContent">
+                                    <!-- <form class="d-flex" role="search">
                                     <input class="form-control me-2" type="search" placeholder="Search"
                                         aria-label="Search">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -98,54 +100,56 @@
                                     </svg>
                                 </form> -->
 
-                                <!-- Search------------------------------------------------------ -->
-                                <div class="search-container">
-                                    <select class="search-select">
-                                        <option>All</option>
-                                    </select>
-                                    <input type="text" class="search-input" />
-                                    <div class="search-icon">
-                                        <i class="bi bi-search"></i>
+                                    <!-- Search------------------------------------------------------ -->
+                                    <div class="search-container">
+                                        <select class="search-select">
+                                            <option>All</option>
+                                        </select>
+                                        <input type="text" class="search-input" />
+                                        <div class="search-icon">
+                                            <i class="bi bi-search"></i>
 
+                                        </div>
                                     </div>
+
+                                    <!-- ------------------------------ Search ---------------------------------------- -->
+                                    <ul class="navbar-nav me-auto nav-item offset-0">
+                                        <li class="nav-item">
+                                            <a class="nav-link active link-success" aria-current="page"
+                                                href="index.do">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active link-success" href="profile.do">Profile</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active link-success" href="contact.do">Contact Us</a>
+                                        </li>
+
+                                        <c:choose>
+                                            <c:when test="${user == null}">
+                                                <li class="">
+                                                    <a href="signin.do" class="nav-link active link-success">Sign-In
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="signup.do" class="nav-link active link-success">Sign-Up
+                                                    </a>
+                                                </li>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <li>
+                                                    <a href="logout.do" class="nav-link active link-success">Log-Out</a>
+                                                </li>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </ul>
                                 </div>
-
-                                <!-- ------------------------------ Search ---------------------------------------- -->
-                                <ul class="navbar-nav me-auto nav-item offset-2">
-                                    <li class="nav-item">
-                                        <a class="nav-link active link-success" aria-current="page"
-                                            href="index.do">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active link-success" href="profile.do">Profile</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active link-success" href="contact.do">Contact Us</a>
-                                    </li>
-
-                                    <c:choose>
-                                        <c:when test="${user == null}">
-                                            <li class="">
-                                                <a href="signin.do" class="nav-link active link-success">Sign-In
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="signup.do" class="nav-link active link-success">Sign-Up
-                                                </a>
-                                            </li>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <li>
-                                                <a href="logout.do" class="nav-link active link-success">Log-Out</a>
-                                            </li>
-                                        </c:otherwise>
-                                    </c:choose>
-                                </ul>
                             </div>
-                        </div>
-                    </nav>
+                        </nav>
+                    </div>
+                    <!-- <div class="col-1"></div> -->
                 </div>
-                <!-- <div class="col-1"></div> -->
             </div>
+
         </div>
     </header>
