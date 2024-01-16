@@ -19,7 +19,7 @@
     ${param.password}
 
     <hr>
-    <form action="next1.do" method="post">
+    <form action="next1.do" method="get">
         <label for="phone" class="form-label">Contact Number</label>
         <input type="number" class="form-control" id="phone" name="phone" required>
         <div class="invalid-feedback" id="phone_error_feedback">Enter Valid Phone Number</div>
