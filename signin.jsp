@@ -16,47 +16,6 @@
     <form action="signin.do" method="post">
         <div class="container">
             <div class="box">
-                <!-- ----------------Sign up---------------- -->
-
-
-                <!-- 
-                <div class="box-signup" id="signup">
-                    <div class="top-header">
-                        <h3>Sign Up, Now </h3>
-                        <small>We are happy to have you with us.</small>
-                    </div>
-                    <div class="input-group">
-                        <div class="input-field">
-                            <input type="text" class="input-box" id="regUser" required>
-                            <label for="regUser">Username </label>
-                        </div>
-                        <div class="input-field">
-                            <input type="text" class="input-box" id="regEmail" required>
-                            <label for="regEmail">Email address</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" class="input-box" id="regPassword" required>
-                            <label for="regPassword">Password</label>
-                            <div class="eye-area">
-                                <div class="eye-box" onclick="myRegPassword()">
-                                    <i class="fa-regular fa-eye" id="eye-2"></i>
-                                    <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="remember">
-                            <input type="checkbox" id="formCheck-2" class="check">
-                            <label for="formCheck-2">Remember Me</label>
-                        </div>
-                        <div class="input-field">
-                            <input type="submit" class="input-submit" value="Sign In">
-                        </div>
-                        <div class="forgot">
-                            <a href="#">Forgot Password</a>
-                        </div>
-                    </div>
-                </div> -->
                 <!-- ----------------Sign in---------------- -->
                 <div class="box-signin" id="signin">
                     <div class="top-header">
@@ -93,10 +52,14 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+    </form>
+</body>
 
-
-                <!-- --------------- Switch --------------------------------- -->
-                <!-- 
+</html>
+<!-- --------------- Switch --------------------------------- -->
+<!-- 
                 <div class="switch">
                     <a href="#" class="login" onclick="login()">Signin</a>
                     <a href="#" class="register" onclick="register()">Signup</a>
@@ -154,9 +117,7 @@
             }
         }
     </script> -->
-</body>
 
-</html>
 
 
 

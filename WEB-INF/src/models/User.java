@@ -67,6 +67,33 @@ public class User {
     }
 
     // ##################################### Other Methods####################
+    // new c and p
+    public static boolean checkPhoneExists(String phone) {
+        boolean flag = false;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/grodb?user=root&password=1234");
+
+            String query = "select user_id from users where phone=?";
+
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, phone);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                flag = true;
+            }
+
+            con.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return flag;
+    }
+    // New c and P
 
     public void savePic(String fileName) {
         try {

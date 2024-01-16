@@ -13,7 +13,7 @@
         </ul>
         <ul>
             <p>Make Money with Us</p>
-            <a>Sell products on Grocery</a>
+            <a href="seller.do" style="text-decoration: none;">Sell products on Grocery</a>
             <a>Sell on Grocery Business</a>
             <a>Sell apps on Grocery</a>
             <a>Become an Affiliate</a>

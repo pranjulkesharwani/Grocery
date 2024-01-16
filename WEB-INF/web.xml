@@ -44,4 +44,14 @@
     <param-name>secret_key</param-name>
     <param-value>6LcOMxgpAAAAAHwSGtzA2bqsfiwSly1ma3h9ymow</param-value>
   </context-param>
+
+  <context-param>
+    <param-name>reg_recaptcha</param-name>
+    <param-value>https://www.google.com/recaptcha/api/siteverify</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>secret_key</param-name>
+    <param-value>6Lf4jFIpAAAAAPlFWjtz3clj42ETc59zWpb7u82n</param-value>
+  </context-param>
 </web-app>
