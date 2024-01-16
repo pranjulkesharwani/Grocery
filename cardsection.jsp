@@ -4,7 +4,7 @@
             <h4>Best Sellers</h4>
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="static/images/s1.webp" class="card-img-top" alt="...">
+                    <img src="static/images/s1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
                         <h5 class="card-title">Onion</h5>
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="static/images/s2.webp" height="269px" class="card-img-top" alt="...">
+                    <img src="static/images/s2.png" height="269px" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
                         <h5 class="card-title">Potato</h5>
@@ -81,7 +81,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="static/images/s7.webp" height="269px" class="card-img-top" alt="...">
+                    <img src="static/images/s7.png" height="269px" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
                         <h5 class="card-title">Capsicum - Green</h5>
@@ -118,7 +118,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="static/images/s4.webp" class="card-img-top" alt="...">
+                    <img src="static/images/s4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
                         <h5 class="card-title">Cauliflower</h5>

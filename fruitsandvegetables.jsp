@@ -3,22 +3,22 @@
         <h4>Fruits & Vegetables</h4>
         <div class=" col-3">
             <div class="card" style="width: 18rem;">
-                <img src="static/images/fv1.webp" class="card-img-top" alt="...">
+                <img src="static/images/fv1.png" class="card-img-top" alt="...">
             </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 18rem;">
-                <img src="static/images/fv2.webp" class="card-img-top" alt="...">
+                <img src="static/images/fv2.png" class="card-img-top" alt="...">
             </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 18rem;">
-                <img src="static/images/fv3.webp" class="card-img-top" alt="...">
+                <img src="static/images/fv3.png" class="card-img-top" alt="...">
             </div>
         </div>
         <div class="col-3">
             <div class="card" style="width: 18rem;">
-                <img src="static/images/fv4.webp" class="card-img-top" alt="...">
+                <img src="static/images/fv4.png" class="card-img-top" alt="...">
             </div>
         </div>
     </div>
