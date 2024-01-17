@@ -19,28 +19,31 @@
     ${param.password}
 
     <hr>
-    <form action="next1.do" method="get">
-        <label for="phone" class="form-label">Contact Number</label>
-        <input type="number" class="form-control" id="phone" name="phone" required>
-        <div class="invalid-feedback" id="phone_error_feedback">Enter Valid Phone Number</div>
+    <div class="container">
+        <form action="next1.do" method="get">
+            <label for="phone" class="form-label">Contact Number</label>
+            <input type="number" class="form-control w-25 my-3" id="phone" name="phone" required>
+            <div class="invalid-feedback" id="phone_error_feedback">Enter Valid Phone Number</div>
 
 
-        <input type="button" value="Send OTP" class="btn btn-sm btn-warning" id="send_otp">
+            <input type="button" class="my-2 btn btn-warning" value="Send OTP" class="btn btn-sm btn-warning"
+                id="send_otp">
 
-        <div class="mb-3 d-none" id="check_otp_box">
-            <label for="otp" class="form-label">Enter OTP Sent to your Contact Number</label>
-            <input type="number" id="otp" class="form-control">
-            <div class="invalid-feedback" id="otp_error_feedback">Incorrect OTP... Please Enter correct OTP</div>
-            <input type="button" value="Check OTP" id="check_otp" class="mt-2 btn btn-primary btn-sm">
-        </div>
+            <div class="mb-3 d-none" id="check_otp_box">
+                <label for="otp" class="form-label">Enter OTP Sent to your Contact Number</label>
+                <input type="number" id="otp" class="form-control w-25">
+                <div class="invalid-feedback" id="otp_error_feedback">Incorrect OTP... Please Enter correct OTP</div>
+                <input type="button" value="Check OTP" id="check_otp" class="my-2 btn btn-warning ">
+            </div>
 
-        <div id="next_step" class="d-none">
-            <div class="g-recaptcha mb-3" data-sitekey="6Lf4jFIpAAAAAJEIrIoXRnowoHoL8Nt9IhiF4mKA"></div>
-            <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+            <div id="next_step" class="d-none">
+                <div class="g-recaptcha mb-3" data-sitekey="6Lf4jFIpAAAAAJEIrIoXRnowoHoL8Nt9IhiF4mKA"></div>
+                <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
 
-            <input type="submit" value="SignUp" class="btn btn-primary">
-        </div>
-    </form>
+                <input type="submit" value="SignUp" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
     <script>
         let next_step = document.querySelector('#next_step');
 
