@@ -1,5 +1,7 @@
 package models;
 
+import java.sql.DriverManager;
+
 public class Manufacture {
     // ############################# Properties #############################
     private Integer manufactureId;
@@ -11,6 +13,10 @@ public class Manufacture {
     // ######################### Constructor #############################
     public Manufacture() {
 
+    }
+
+    public static void saveData() {
+        // DriverManager.getConnection("");
     }
 
     // ########################## Getter-Setter #########################

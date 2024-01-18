@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 @WebServlet("/register.do")
 public class RegisterServlet extends HttpServlet {
@@ -24,6 +26,12 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        request.getRequestDispatcher("next.jsp").forward(request, response);
+        Map<String, String> map = new HashMap<>();
+        map.put("name", name);
+        map.put("email", email);
+        map.put("password", password);
+
+        session.setAttribute("map", map);
+        request.getRequestDispatcher("phonevalidate.jsp").forward(request, response);
     }
 }
