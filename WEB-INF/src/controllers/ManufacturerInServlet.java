@@ -7,12 +7,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
 
+import models.Manufacturer;
+import models.Address;
+import models.Country;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+@SuppressWarnings("unchecked")
 @WebServlet("/manufact_in.do")
-public class ManufactureInServlet extends HttpServlet {
+public class ManufacturerInServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
@@ -34,21 +39,34 @@ public class ManufactureInServlet extends HttpServlet {
         String email = map.get("email");
         String description = request.getParameter("description");
         String website = request.getParameter("website");
-        String registration = request.getParameter("registration");
+        String regNum = request.getParameter("registration");
         String address1 = request.getParameter("address1");
         String address2 = request.getParameter("address2");
+        Integer countryId = Integer.parseInt(request.getParameter("countryId"));
+        // String
 
-        System.out.println(name);
-        System.out.println(password);
-        System.out.println(email);
-        System.out.println(phone);
-        System.out.println(description);
-        System.out.println(website);
-        System.out.println(registration);
-        System.out.println(address1);
-        System.out.println(address2);
+        // System.out.println(name);
+        // System.out.println(password);
+        // System.out.println(email);
+        // System.out.println(phone);
+        // System.out.println(description);
+        // System.out.println(website);
+        // System.out.println(regNum);
+        // System.out.println(address1);
+        // System.out.println(address2);
 
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        // System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        boolean flag = false;
+        Manufacturer manufacturer = new Manufacturer(name, email, password, phone, new Country(countryId),
+                new Address(address1, address2),
+                description,
+                website, regNum);
+
+        System.out.println(manufacturer.saveUser() + "++++++++++++++++++++++++++++++++++++");
+        if (manufacturer.saveUser()) {
+            flag = manufacturer.saveManufacturer();
+        }
         request.getRequestDispatcher("dashboard.jsp").forward(request, response);
     }
 }

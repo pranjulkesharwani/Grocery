@@ -12,8 +12,9 @@ public class Address {
 
     }
 
-    public Address(String addressLine1) {
+    public Address(String addressLine1, String addressLine2) {
         this.addressLine1 = addressLine1;
+        this.addressLine2 = addressLine2;
     }
 
     public Address(Integer addressId, User user) {
@@ -29,6 +30,10 @@ public class Address {
         this.addressId = addressId;
         this.addressLine1 = addressLine1;
     }
+
+    // public Address(String addressLine2) {
+    // this.addressLine2 = addressLine2;
+    // }
 
     public Integer getAddressId() {
         return addressId;

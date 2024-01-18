@@ -40,17 +40,33 @@
                     <input type="text" class="form-control" id="inputAddress2" name="address2"
                         placeholder="Apartment, studio, or floor">
                 </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">Country</label>
+                    <select id="inputState" class="form-select" name="countryId">
+                        <c:forEach var="country" items="${countries}">
+                            <option value="${country.countryId}">
+                                <c:out value="${country.name}" />
+                            </option>
+                        </c:forEach>
+                    </select>
+                </div>
                 <div class="col-md-6">
                     <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity" name="city">
+                    <select id="inputState" class="form-select" name="cityId">
+                        <c:forEach var="city" items="${cities}">
+                            <option value="${city.cityId}">
+                                <c:out value="${city.name}" />
+                            </option>
+                        </c:forEach>
+                    </select>
                 </div>
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <label for="inputState" class="form-label">State</label>
                     <select id="inputState" class="form-select">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="col-md-2">
                     <label for="inputZip" class="form-label">Zip</label>
                     <input type="text" class="form-control" id="inputZip" name="zip">

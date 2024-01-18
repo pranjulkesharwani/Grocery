@@ -3,11 +3,12 @@ package models;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import org.jasypt.util.password.StrongPasswordEncryptor;
 
-// import models.Address;
+import models.Address;
 
 public class User {
 
@@ -66,7 +67,53 @@ public class User {
         this.address = address;
     }
 
+    public User(String name, String email, String password, String phone, Address address) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.address = address;
+    }
+
     // ##################################### Other Methods####################
+
+    public boolean saveUser() {
+        boolean flag = false;
+        try {
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/grodb?user=root&password=1234");
+
+            String query = "insert into users (name, email, password, phone, address, country,) value (?, ?, ?, ?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            System.out.println(ps + "++++++++++++++++++++++++++++++++++++++++");
+
+            ps.setString(1, getName());
+            ps.setString(2, getEmail());
+            ps.setString(3, getPassword());
+            ps.setString(4, getPhone());
+            ps.setString(5, getAddress().getAddressLine1());
+            ps.setInt(6, getCountry().getCountryId());
+
+            int val = ps.executeUpdate();
+            // System.out.println(ps + "+++++++++++++++++++++++++++++++++++++++");
+            if (val == 1) {
+                flag = true;
+                ResultSet rs = ps.getGeneratedKeys();
+
+                if (rs.next()) {
+                    userId = rs.getInt(1);
+                }
+            }
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+
+        return flag;
+    }
+
     // new c and p
     public static boolean checkPhoneExists(String phone) {
         boolean flag = false;

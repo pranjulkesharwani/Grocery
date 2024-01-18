@@ -8,6 +8,19 @@ public class State {
 
     }
 
+    public State(String name) {
+        this.name = name;
+    }
+
+    public State(Integer stateId) {
+        this.stateId = stateId;
+    }
+
+    public State(Integer stateId, String name) {
+        this.stateId = stateId;
+        this.name = name;
+    }
+
     public Integer getStateId() {
         return stateId;
     }

@@ -2,7 +2,7 @@ package models;
 
 public class Product {
     private Integer productId;
-    private Manufacture manufacture;
+    private Manufacturer manufacturer;
     private String name;
     private Integer price;
     private Integer discount;
@@ -24,12 +24,12 @@ public class Product {
         this.productId = productId;
     }
 
-    public Manufacture getManufacture() {
-        return manufacture;
+    public Manufacturer getManufacturer() {
+        return manufacturer;
     }
 
-    public void setManufacture(Manufacture manufacture) {
-        this.manufacture = manufacture;
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     public String getName() {

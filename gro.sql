@@ -40,7 +40,8 @@ values
 create table states 
 (
     state_id int auto_increment primary key,
-    name char(50) not null
+    name char(50) not null,
+    
 );
 
 create table categories 

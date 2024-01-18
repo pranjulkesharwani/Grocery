@@ -24,6 +24,7 @@ public class AppListenerImpl implements ServletContextListener {
 
         ArrayList<City> cities = City.collectAllCities();
         context.setAttribute("cities", cities);
+        System.out.println(cities);
     }
 
     public void contextDestroyed(ServletContextEvent ev) {

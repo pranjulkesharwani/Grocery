@@ -18,9 +18,9 @@
 
         <%-- <c:set var="aaa" value="${param.name}" scope="session" /> --%>
 
-        ${map.name}
+        <!-- ${map.name}
         ${map.email}
-        ${map.password}
+        ${map.password} -->
 
         <hr>
         <div class="container">

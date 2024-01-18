@@ -22,6 +22,12 @@ public class City {
 
     }
 
+    public City(Integer cityId, String name, State state) {
+        this.cityId = cityId;
+        this.name = name;
+        this.state = state;
+    }
+
     // ######################## Other Methods ######################
     // incomplete
     public static ArrayList<City> collectAllCities() {
@@ -38,7 +44,7 @@ public class City {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                // City.add(new City(rs.getInt(1), rs.get ))
+                cities.add(new City(rs.getInt(1), rs.getString(2), new State(rs.getInt(3))));
             }
 
             con.close();
