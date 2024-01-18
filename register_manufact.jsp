@@ -14,30 +14,35 @@
 
     <body>
         <h1>Next1 Page</h1>
-        ${param.name}
+        <!-- ${param.name}
         ${param.password}
-        ${param.phone}
-        <c:out value="${param.name}" />
+        ${param.phone} -->
+
+        <!-- ${aaa} -->
+        <%--<c:out value="${param.name}" />
         <c:out value="${param.phone}" />
         <c:out value="${param.password}" />
+        --%>
         <hr>
         <div class="container">
 
-
-            <form class="row g-3">
+            <!-- ${map.name} -->
+            <!-- ${map.password} -->
+            <form action="manufact_in.do" class="row g-3" method="post">
 
                 <div class="col-12">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <label for="inputAddress" class="form-label">Address 1</label>
+                    <input type="text" class="form-control" id="inputAddress" name="address1"
+                        placeholder="1234 Main St">
                 </div>
                 <div class="col-12">
                     <label for="inputAddress2" class="form-label">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2"
+                    <input type="text" class="form-control" id="inputAddress2" name="address2"
                         placeholder="Apartment, studio, or floor">
                 </div>
                 <div class="col-md-6">
                     <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="inputCity" name="city">
                 </div>
                 <div class="col-md-4">
                     <label for="inputState" class="form-label">State</label>
@@ -48,19 +53,19 @@
                 </div>
                 <div class="col-md-2">
                     <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" class="form-control" id="inputZip" name="zip">
                 </div>
                 <div class="col-12">
                     <label for="inputDescription" class="form-label">Description</label>
-                    <textarea id="inputDescription" class="form-control"></textarea>
+                    <textarea id="inputDescription" class="form-control" name="description"></textarea>
                 </div>
                 <div class="col-6">
                     <label for="inputWebsite" class="form-label">Website URL</label>
-                    <input type="number" id="inputWebsite" class="form-control">
+                    <input type="text" id="inputWebsite" class="form-control" name="website">
                 </div>
                 <div class="col-6">
                     <label for="inputRegistration" class="form-label">Registration Num</label>
-                    <input type="number" id="inputRegistration" class="form-control">
+                    <input type="number" id="inputRegistration" class="form-control" name="registration">
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Sign in</button>

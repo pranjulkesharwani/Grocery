@@ -13,7 +13,7 @@
     <form action="register.do" method="post">
         <div class="container">
             <div class="box">
-                <!-- ----------------Sign in---------------- -->
+                <!-- ----------------Register Now ---------------- -->
                 <div class="box-signin" id="signin">
                     <div class="top-header">
                         <h3>Register, Now</h3>
@@ -44,7 +44,7 @@
                             <label for="formCheck">Remember Me</label>
                         </div>
                         <div class="input-field">
-                            <input type="submit" class="input-submit" value="Sign Up">
+                            <input type="submit" class="input-submit" value="Register Now">
                         </div>
                         <div class="forgot">
                             <a href="#">Forgot Password</a>
