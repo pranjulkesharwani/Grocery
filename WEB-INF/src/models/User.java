@@ -85,18 +85,25 @@ public class User {
 
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/grodb?user=root&password=1234");
 
-            String query = "insert into users (name, email, password, phone, address, country,) value (?, ?, ?, ?, ?, ?)";
+            String query = "insert into users (name, email, password, phone, address, country_id) value (?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-            System.out.println(ps + "++++++++++++++++++++++++++++++++++++++++");
 
-            ps.setString(1, getName());
-            ps.setString(2, getEmail());
-            ps.setString(3, getPassword());
-            ps.setString(4, getPhone());
-            ps.setString(5, getAddress().getAddressLine1());
-            ps.setInt(6, getCountry().getCountryId());
+            // ps.setString(1, getName());
+            // ps.setString(2, getEmail());
+            // ps.setString(3, getPassword());
+            // ps.setString(4, getPhone());
+            // ps.setString(5, getAddress().getAddressLine1());
+            // ps.setInt(6, getCountry().getCountryId());
+
+            ps.setString(1, name);
+            ps.setString(2, email);
+            ps.setString(3, password);
+            ps.setString(4, phone);
+            ps.setString(5, address.getAddressLine1());
+            ps.setInt(6, country.getCountryId());
 
             int val = ps.executeUpdate();
+            System.out.println(ps + "++++++++++++++++++++++++++++++++++++++++");
             // System.out.println(ps + "+++++++++++++++++++++++++++++++++++++++");
             if (val == 1) {
                 flag = true;

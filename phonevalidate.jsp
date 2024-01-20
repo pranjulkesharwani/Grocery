@@ -42,11 +42,11 @@
                     <input type="button" value="Check OTP" id="check_otp" class="my-2 btn btn-warning ">
                 </div>
 
-                <div id="next_step" class="d-none">
+                <div id="next_step" class="d-none my-5">
                     <div class="g-recaptcha mb-3" data-sitekey="6Lf4jFIpAAAAAJEIrIoXRnowoHoL8Nt9IhiF4mKA"></div>
                     <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
 
-                    <input type="submit" value="Check" class="btn btn-primary">
+                    <input type="submit" value="Submit" class="btn btn-primary">
                 </div>
             </form>
         </div>

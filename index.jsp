@@ -9,7 +9,7 @@
         <!-- <img src="static/images/logo.webp" alt="Logo" width="30" height="24"> -->
         <title>:: Grocery ::</title>
 
-        <link rel="stylesheet" href="static/css/header2.css">
+        <!-- <link rel="stylesheet" href="static/css/header2.css"> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="static/css/card.css">
         <link rel="stylesheet" href="static/css/footer.css">
@@ -24,7 +24,7 @@
             <c:import url="header.jsp" />
 
             <!-- Start-------New Nav ---------------------------------->
-            <div class="container">
+            <!-- <div class="container">
                 <nav class="nav">
                     <div class="con con-nav">
                         <ul>
@@ -42,8 +42,32 @@
                         </ul>
                     </div>
                 </nav>
+            </div> -->
+            <div class="container">
+                <ul class="nav">
+                    <li class="nav-item my-2">
+                        <span class="nav-link">
+                            <i class="bi bi-list"></i>
+                            All
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Best Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Today's Deal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Customer Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kitchen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Prime Subscriber</a>
+                    </li>
+                </ul>
             </div>
-
             <!-- End-------New Nav ---------------------------------->
 
 

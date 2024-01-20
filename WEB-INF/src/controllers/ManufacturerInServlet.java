@@ -45,27 +45,30 @@ public class ManufacturerInServlet extends HttpServlet {
         Integer countryId = Integer.parseInt(request.getParameter("countryId"));
         // String
 
-        // System.out.println(name);
-        // System.out.println(password);
-        // System.out.println(email);
-        // System.out.println(phone);
-        // System.out.println(description);
-        // System.out.println(website);
-        // System.out.println(regNum);
-        // System.out.println(address1);
-        // System.out.println(address2);
+        System.out.println(name);
+        System.out.println(email);
+        System.out.println(password);
+        System.out.println(phone);
+        System.out.println(address1);
+        System.out.println(address2);
+        System.out.println(countryId);
+        System.out.println(description);
+        System.out.println(website);
+        System.out.println(regNum);
 
         // System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
         boolean flag = false;
         Manufacturer manufacturer = new Manufacturer(name, email, password, phone, new Country(countryId),
-                new Address(address1, address2),
-                description,
-                website, regNum);
+                new Address(address1, address2), description, website, regNum);
 
-        System.out.println(manufacturer.saveUser() + "++++++++++++++++++++++++++++++++++++");
-        if (manufacturer.saveUser()) {
+        System.out.println(manufacturer.getUserId());
+        boolean check = manufacturer.saveUser();
+        System.out.println(check + "++++++++++++++++++++++++++++++++++++");
+        System.out.println(manufacturer.getUserId());
+        if (check) {
             flag = manufacturer.saveManufacturer();
+            // flag = true;
         }
         request.getRequestDispatcher("dashboard.jsp").forward(request, response);
     }

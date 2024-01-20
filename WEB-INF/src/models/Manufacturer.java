@@ -20,6 +20,11 @@ public class Manufacturer extends User {
 
     }
 
+    // public Manufacturer(String name, String email, String password, String phone,
+    // Country country, Address address) {
+    // super(name, email, password, phone, country, address);
+    // }
+
     public Manufacturer(String name, String email, String password, String phone, Country country, Address address,
             String description,
             String website, String regNum) {
@@ -41,6 +46,7 @@ public class Manufacturer extends User {
     // ########################## Getter-Setter #########################
 
     public boolean saveManufacturer() {
+        System.out.println("method chal gayi");
         boolean flag = false;
 
         try {
@@ -50,13 +56,14 @@ public class Manufacturer extends User {
             String query = "insert into manufacturers (user_id, description, website, reg_num) value (?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(query);
 
-            ps.setInt(1, user.getUserId());
+            ps.setInt(1, getUserId());
             ps.setString(2, description);
             ps.setString(3, website);
             ps.setString(4, regNum);
 
             int val = ps.executeUpdate();
 
+            System.out.println("value dekh lo bhai " + val);
             if (val == 1) {
                 flag = true;
             }
@@ -65,7 +72,7 @@ public class Manufacturer extends User {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
+        System.out.println("Flag ki value bhi dekhlo bhai " + flag);
         return flag;
     }
 
