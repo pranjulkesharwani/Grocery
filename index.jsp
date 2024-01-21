@@ -127,112 +127,114 @@
         <!-- Shop Section  ################################################ Start ################################################################ -->
         <!-- Shop Section -->
         <div class="container-fluid">
-            <div class="containers">
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/masti.webp">
-                            <!-- <div class="col">box1</div>
+            <div class="container">
+                <div class="containers">
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/masti.webp">
+                                <!-- <div class="col">box1</div>
                                 <div class="col">box2</div>
                             <div class="col">box3</div>
                             <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/amul.webp">
-                            <!-- <div class="col">box1</div>
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/amul.webp">
+                                <!-- <div class="col">box1</div>
                                 <div class="col">box2</div>
                             <div class="col">box3</div>
                             <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/butter.webp">
-                            <!-- <div class="col">box1</div>
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/butter.webp">
+                                <!-- <div class="col">box1</div>
                                 <div class="col">box2</div>
                             <div class="col">box3</div>
                             <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/soft_drink.webp">
-                            <!-- <div class="col">box1</div>
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/soft_drink.webp">
+                                <!-- <div class="col">box1</div>
                                 <div class="col">box2</div>
                             <div class="col">box3</div>
                             <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/masti.webp">
-                            <!-- <div class="col">box1</div>
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/masti.webp">
+                                <!-- <div class="col">box1</div>
                                 <div class="col">box2</div>
                             <div class="col">box3</div>
                             <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/amul.webp">
-                            <!-- <div class="col">box1</div>
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/amul.webp">
+                                <!-- <div class="col">box1</div>
                             <div class="col">box2</div>
                             <div class="col">box3</div>
                             <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/butter.webp">
-                            <!-- <div class="col">box1</div>
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/butter.webp">
+                                <!-- <div class="col">box1</div>
                                 <div class="col">box2</div>
                                 <div class="col">box3</div>
                                 <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
-                <div class="row r">
-                    <div class="box-content col">
-                        <h2>Health & Personal Care</h2>
-                        <div class="box-img">
-                            <img src="static/images/soft_drink.webp">
-                            <!-- <div class="col">box1</div>
+                    <div class="row r">
+                        <div class="box-content col">
+                            <h2>Health & Personal Care</h2>
+                            <div class="box-img">
+                                <img src="static/images/soft_drink.webp">
+                                <!-- <div class="col">box1</div>
                                 <div class="col">box2</div>
                                 <div class="col">box3</div>
                             <div class="col">box4</div> -->
+                            </div>
+                            <p>See more</p>
                         </div>
-                        <p>See more</p>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
 
