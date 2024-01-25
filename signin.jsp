@@ -45,6 +45,9 @@
                         <div class="input-field">
                             <input type="submit" class="input-submit" value="Sign In">
                         </div>
+                        <div class="input-field">
+                            <a href="signup.do"><input type="button" class="input-submit" value="Sign Up"></a>
+                        </div>
                         <div class="forgot">
                             <a href="#">Forgot Password</a>
                             <!-- <button type="button" style="border:none;">Forgot Password</button> -->

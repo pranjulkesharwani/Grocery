@@ -71,8 +71,13 @@
                             <label for="formCheck-2">Remember Me</label>
                         </div>
                         <div class="input-field1">
-                            <input type="submit" class="input-submit" value="Sign In">
+                            <input type="submit" class="input-submit" value="Sign Up">
                         </div>
+
+                        <div class="input-field1">
+                            <a href="signin.do"><input type="button" class="input-submit" value="Sign In"></a>
+                        </div>
+
                         <!-- <div class="forgot">
                             <a href="#">Forgot Password</a>
                         </div> -->

@@ -4,26 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="static/css/form.css">
+    <link rel="stylesheet" href="fontawesom/css/all.min.css">
 </head>
 
 <body>
-
-    <form action="register.do" method="post">
+    <form action="signin.do" method="post">
         <div class="container">
             <div class="box">
-                <!-- ----------------Register Now ---------------- -->
+                <!-- ----------------Sign in---------------- -->
                 <div class="box-signin" id="signin">
                     <div class="top-header">
-                        <h3>Register, Now</h3>
-                        <small>We are happy to have you with us.</small>
+                        <h3>Hello, Again</h3>
+                        <small>We are happy to have you back.</small>
                     </div>
                     <div class="input-group">
-                        <div class="input-field">
-                            <input type="text" name="name" class="input-box" id="name" required>
-                            <label for="name">Your Name</label>
-                        </div>
                         <div class="input-field">
                             <input type="text" name="email" class="input-box" id="logEmail" required>
                             <label for="logEmail">Email address</label>
@@ -44,14 +43,11 @@
                             <label for="formCheck">Remember Me</label>
                         </div>
                         <div class="input-field">
-                            <input type="submit" class="input-submit" value="Register Now">
+                            <input type="submit" class="input-submit" value="Sign In">
                         </div>
-                        <!-- "manufacturer_login.jsp" -->
                         <div class="input-field">
-                            <a href="manufacturer_login.jsp"><input type="button" class="input-submit"
-                                    value="Sign In"></a>
+                            <a href=""><input type="button" class="input-submit" value="Register Now"></a>
                         </div>
-
                         <div class="forgot">
                             <a href="#">Forgot Password</a>
                             <!-- <button type="button" style="border:none;">Forgot Password</button> -->
@@ -62,7 +58,6 @@
             </div>
         </div>
     </form>
-
 </body>
 
 </html>
