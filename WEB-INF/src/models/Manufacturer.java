@@ -6,8 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import org.jasypt.util.password.StrongPasswordEncryptor;
+
+import models.User;
 
 public class Manufacturer extends User {
+
+    static StrongPasswordEncryptor spe = new StrongPasswordEncryptor();
+
     // ############################# Properties #############################
     private Integer manufacturerId;
     private User user;
@@ -20,6 +26,13 @@ public class Manufacturer extends User {
 
     }
 
+    // public Manufacturer(String name, String password) {
+    // super(name, password);
+    // }
+
+    public Manufacturer(String email, String password) {
+        super(email, password);
+    }
     // public Manufacturer(String name, String email, String password, String phone,
     // Country country, Address address) {
     // super(name, email, password, phone, country, address);
@@ -44,6 +57,39 @@ public class Manufacturer extends User {
     }
 
     // ########################## Getter-Setter #########################
+
+    public int SignInManufacturer() {
+        int statusId = 0;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/grodb?user=root&password=1234");
+            System.out.println("++++++++++++++++++++++++++++++++++++++++++In method start");
+
+            String query = "select m.manufacturer_Id, u.name, u.password, status_id from manufacturers as m inner join users as u where email=?";
+            PreparedStatement ps = con.prepareStatement(query);
+            System.out.println("++++++++++++++++++++++++++++++++++++++++++ After ps.execute");
+
+            ps.setString(1, user.getEmail());
+            ResultSet rs = ps.executeQuery();
+
+            System.out.println(ps);
+            if (rs.next()) {
+                statusId = rs.getInt("status_id");
+                if (statusId == 2) {
+                    if (spe.checkPassword(user.getPassword(), rs.getString("password"))) {
+                        manufacturerId = rs.getInt("manufacturer_id");
+                    }
+                }
+            } else {
+                statusId = -1;
+            }
+            con.close();
+            System.out.println(statusId + "++++++++++++++++++++++++");
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return statusId;
+    }
 
     public boolean saveManufacturer() {
         System.out.println("method chal gayi");

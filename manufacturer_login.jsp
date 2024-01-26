@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form action="signin.do" method="post">
+    <form action="manufacturer_login.do" method="post">
         <div class="container">
             <div class="box">
                 <!-- ----------------Sign in---------------- -->
@@ -46,7 +46,7 @@
                             <input type="submit" class="input-submit" value="Sign In">
                         </div>
                         <div class="input-field">
-                            <a href=""><input type="button" class="input-submit" value="Register Now"></a>
+                            <a href="register.do"><input type="button" class="input-submit" value="Register Now"></a>
                         </div>
                         <div class="forgot">
                             <a href="#">Forgot Password</a>

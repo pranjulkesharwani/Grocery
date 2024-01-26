@@ -48,7 +48,7 @@
                         </div>
                         <!-- "manufacturer_login.jsp" -->
                         <div class="input-field">
-                            <a href="manufacturer_login.jsp"><input type="button" class="input-submit"
+                            <a href="manufacturer_login.do"><input type="button" class="input-submit"
                                     value="Sign In"></a>
                         </div>
 
