@@ -249,6 +249,8 @@
         <!-- fruit and vegetables -->
         <c:import url="fruitsandvegetables.jsp" />
 
+        <c:import url="staples.jsp" />
+
         <c:import url="footer.jsp" />
 
 

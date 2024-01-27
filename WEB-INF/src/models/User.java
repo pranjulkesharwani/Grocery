@@ -77,6 +77,39 @@ public class User {
 
     // ##################################### Other Methods####################
 
+    public int signInMacuf() {
+        int statusId = 0;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/grodb?user=root&password=1234");
+
+            String query = "select password, status_id from user where email=?";
+
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, email);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                statusId = rs.getInt("status_id");
+                if (statusId == 2) {
+                    if (spe.checkPassword(password, rs.getString("password"))) {
+                        password = null;
+                    } else {
+                        statusId = -1;
+                    }
+                }
+            }
+            con.close();
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return statusId;
+    }
+
     public boolean saveUser() {
         boolean flag = false;
         try {

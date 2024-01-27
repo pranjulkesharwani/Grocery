@@ -25,11 +25,16 @@ public class ManufacturerLogin extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        Manufacturer manufacturer = new Manufacturer(email, password);
-        System.out.println("+++++++++++++++++++++ " + password + "++++++++++++++++++++++++" + email);
-        int val = manufacturer.SignInManufacturer();
+        User user = new User(email, password);
 
-        System.out.println(val + "++++++++++++++++++++++");
+        // Manufacturer manufacturer = new Manufacturer(email, password);
+
+        System.out.println("+++++++++++++++++++++ " + password + "++++++++++++++++++++++++" + email);
+
+        // int val = user.signInManuf();
+        // int val = manufacturer.SignInManufacturer();
+
+        // System.out.println(val + "++++++++++++++++++++++");
 
         request.getRequestDispatcher("manufacturer_login.jsp").forward(request, response);
     }
