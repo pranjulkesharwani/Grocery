@@ -31,11 +31,16 @@ public class ManufacturerLogin extends HttpServlet {
 
         System.out.println("+++++++++++++++++++++ " + password + "++++++++++++++++++++++++" + email);
 
-        // int val = user.signInManuf();
+        int val = user.signInManuf();
+
         // int val = manufacturer.SignInManufacturer();
 
-        // System.out.println(val + "++++++++++++++++++++++");
+        System.out.println(val + "++++++++++++++++++++++");
 
-        request.getRequestDispatcher("manufacturer_login.jsp").forward(request, response);
+        String nextPage = "manufacturer_login.jsp";
+        if (val == 1) {
+            nextPage = "dashboard.jsp";
+        }
+        request.getRequestDispatcher(nextPage).forward(request, response);
     }
 }

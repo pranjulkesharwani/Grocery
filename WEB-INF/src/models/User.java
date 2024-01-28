@@ -77,7 +77,7 @@ public class User {
 
     // ##################################### Other Methods####################
 
-    public int signInMacuf() {
+    public int signInManuf() {
         int statusId = 0;
 
         try {
@@ -85,7 +85,7 @@ public class User {
 
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/grodb?user=root&password=1234");
 
-            String query = "select password, status_id from user where email=?";
+            String query = "select password, status_id from users where email=?";
 
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, email);
@@ -130,7 +130,7 @@ public class User {
 
             ps.setString(1, name);
             ps.setString(2, email);
-            ps.setString(3, password);
+            ps.setString(3, spe.encryptPassword(password));
             ps.setString(4, phone);
             ps.setString(5, address.getAddressLine1());
             ps.setInt(6, country.getCountryId());
