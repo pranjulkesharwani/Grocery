@@ -1,9 +1,20 @@
+<style>
+    .ca {
+        transition: 0.5s;
+    }
+
+    .ca:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+</style>
+
 <div class="container-fluid mt-5">
     <div class="container">
         <div class="row p-3" style="background-color: rgba(247,247,247);">
             <h4>Best Sellers</h4>
             <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card ca" style="width: 18rem;">
                     <img src="static/images/s1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
@@ -43,7 +54,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card ca" style="width: 18rem;">
                     <img src="static/images/s2.png" height="269px" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
@@ -80,7 +91,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card ca" style="width: 18rem;">
                     <img src="static/images/s7.png" height="269px" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
@@ -117,7 +128,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card ca" style="width: 18rem;">
                     <img src="static/images/s4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
