@@ -12,7 +12,7 @@
             </div>
             <div class="col-3">
                 <div class="card c" style="width: 18rem;">
-                    <img src="static/images/top1.webp" class="card-img-top" alt="...">
+                    <img src="static/images/top2.webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">.</p>
                     </div>
@@ -20,7 +20,7 @@
             </div>
             <div class="col-3">
                 <div class="card c" style="width: 18rem;">
-                    <img src="static/images/top1.webp" class="card-img-top" alt="...">
+                    <img src="static/images/top3.webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">.</p>
                     </div>
@@ -28,7 +28,7 @@
             </div>
             <div class="col-3">
                 <div class="card c" style="width: 18rem;">
-                    <img src="static/images/top1.webp" class="card-img-top" alt="...">
+                    <img src="static/images/top4.webp" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">.</p>
                     </div>
