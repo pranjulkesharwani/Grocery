@@ -11,6 +11,7 @@
     <h1>Add Product Page</h1>
 
     <hr>
+
 </body>
 
 </html>

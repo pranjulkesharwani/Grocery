@@ -202,19 +202,19 @@
                 <div class="col-3">
                     <h5 class="mt-2">Toys, Baby & Sports</h5>
                     <div class="input-group ms-2">
-                        <input class="form-check-input mt-2" type="checkbox" name="">
+                        <input class="form-check-input mt-2" type="checkbox" name="baby">
                         <div>
                             <span class="mx-2">Baby</span>
                         </div>
                     </div>
                     <div class="input-group ms-2">
-                        <input class="form-check-input mt-2" type="checkbox" name="">
+                        <input class="form-check-input mt-2" type="checkbox" name="toys">
                         <div>
                             <span class="mx-2">Toys</span>
                         </div>
                     </div>
                     <div class="input-group ms-2">
-                        <input class="form-check-input mt-2" type="checkbox" name="">
+                        <input class="form-check-input mt-2" type="checkbox" name="sportingGoods">
                         <div>
                             <span class="mx-2">Sporting Goods</span>
                         </div>

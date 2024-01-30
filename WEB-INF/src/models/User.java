@@ -76,9 +76,10 @@ public class User {
     }
 
     // ##################################### Other Methods####################
-
-    public int signInManuf() {
+    // Not working
+    public boolean signInManuf() {
         int statusId = 0;
+        boolean flag = false;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -91,14 +92,25 @@ public class User {
             ps.setString(1, email);
 
             ResultSet rs = ps.executeQuery();
-
             if (rs.next()) {
                 statusId = rs.getInt("status_id");
-                if (statusId == 2) {
+                // String password = rs.getString(1);
+                // System.out.println(pwd + "++++++++++++++++++++++++ PWD");
+                // System.out.println("+++++++++++++++++++++++++++++++++++++++++statusId" +
+                // statusId);
+
+                // flag = true;
+                if (statusId == 1) {
                     if (spe.checkPassword(password, rs.getString("password"))) {
+                        // flag = password.equals(pwd);
+                        System.out.println(ps);
+                        flag = true;
+                        System.out.println(password + "++++++++++++++++++++++++++++++++++ Password");
                         password = null;
+
                     } else {
                         statusId = -1;
+                        flag = false;
                     }
                 }
             }
@@ -107,7 +119,8 @@ public class User {
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-        return statusId;
+        // return statusId;
+        return flag;
     }
 
     public boolean saveUser() {

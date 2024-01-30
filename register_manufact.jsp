@@ -75,11 +75,22 @@
                     <label for="inputDescription" class="form-label">Description</label>
                     <textarea id="inputDescription" class="form-control" name="description"></textarea>
                 </div>
-                <div class="col-6">
+                <!-- <div class="col-4">
+                    <label for="inputStatusId" class="form-label">Status Id</label>
+                    <select id="inputStatusId" class="form-select" name="statusId">
+                        <forEach var="status" items="${statusId}">
+                            <option value="${status.statusId}">
+                                <c:out value="${status.name}" />
+                            </option>
+                        </forEach>
+                    </select>
+                </div> -->
+                <!-- <input type="number" id="inputStatusId" class="form-control" name="statusId"> -->
+                <div class="col-4">
                     <label for="inputWebsite" class="form-label">Website URL</label>
                     <input type="text" id="inputWebsite" class="form-control" name="website">
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <label for="inputRegistration" class="form-label">Registration Num</label>
                     <input type="number" id="inputRegistration" class="form-control" name="registration">
                 </div>
