@@ -30,11 +30,20 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         String forwardURL = "register.jsp";
-        boolean f2;
+        boolean f2, f1;
         f2 = true;
+        f1 = true;
 
         Pattern p2 = Pattern.compile("\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}");
         Matcher emlMatcher = p2.matcher(email);
+
+        Pattern p1 = Pattern.compile("[A-Za-z0-9]{6,12}");
+        Matcher pwdMatcher = p1.matcher(password);
+
+        if (!pwdMatcher.matches()) {
+            request.setAttribute("pwd_err", "Please Enter Valid Password");
+            f1 = false;
+        }
 
         if (!emlMatcher.matches()) {
             request.setAttribute("eml_err", "Please Enter Valid Email");

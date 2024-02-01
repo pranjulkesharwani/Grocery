@@ -34,14 +34,22 @@ public class ManufacturerLogin extends HttpServlet {
         Pattern emailPattern = Pattern.compile("\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}");
         Matcher emailMatcher = emailPattern.matcher(email);
 
+        Pattern passwordPattern = Pattern.compile("[A-Za-z0-9]{6,12}");
+        Matcher passwordMatcher = passwordPattern.matcher(password);
+
         if (!emailMatcher.matches()) {
             request.setAttribute("Email_Error", "Enter Valid Email");
             flag1 = false;
         }
 
+        if (!passwordMatcher.matches()) {
+            request.setAttribute("Password_Error", "Enter Valid Password");
+            flag2 = false;
+        }
+
         String nextPage = "manufacturer_login.jsp";
 
-        if (flag1) {
+        if (flag1 && flag2) {
             User user = new User(email, password);
 
             if (user.signInManuf()) {
