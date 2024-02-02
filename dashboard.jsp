@@ -23,7 +23,7 @@
         <h2 class="text-warning">Choose categories you wish to sell</h2>
         <h5 class="text-muted">Choose categories you wish to sell</h5>
         <hr>
-        <form action="choose_item.do" method="get">
+        <form action="choose_item.do" method="post">
             <div class="row">
 
                 <div class=" col-3">

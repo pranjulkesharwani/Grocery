@@ -85,14 +85,14 @@ where email=? and u.country_id = c.country_id and u.status_id = s.status_id ;
  alter table users alter status_id set default 1;
 -- ############### User ############################### end
 
-create table manufactures
+create table manufacturers
 (
     manufacture_id int auto_increment primary key,
     user_id int not null,
     description varchar(2000) not null,
     website char(100) not null,
     reg_num char(50) not null,
-    constraint fk_manufactures_users foreign key (user_id) references users (user_id)
+    constraint fk_manufacturers_users foreign key (user_id) references users (user_id)
 );
 
 create table cities 
@@ -147,7 +147,7 @@ create table products
     quantity int not null,
     category_id int not null,
     description char(100) not null,
-    constraint fk_products_manufactures foreign key (manufacture_id) references manufactures (manufacture_id),
+    constraint fk_products_manufactures foreign key (manufacture_id) references manufacturers (manufacture_id),
     constraint fk_products_units foreign key (unit_id) references units (unit_id),
     constraint fk_products_categories foreign key (category_id) references categories (category_id)
 );

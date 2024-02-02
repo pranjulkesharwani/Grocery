@@ -22,7 +22,7 @@
                 </button>
             </div>
         </div>
-        <form action="addproduct.do">
+        <form action="addproduct.do" method="post" enctype="multipart/form-data">
             <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -32,12 +32,20 @@
                         </div>
                         <div class="modal-body">
                             <!-- <p>Modal body text goes here.</p> -->
-                            <label id="" class="form-label">Product Name</label>
-                            <input class="form-control" type="text" name="productName">
+                            <label id="" class="form-label">Name</label>
+                            <input class="form-control" type="text" name="name" value="">
+                            <label id="" class="form-label">Price</label>
+                            <input class="form-control" type="number" name="price">
+                            <label id="" class="form-label">Unit id</label>
+                            <input class="form-control" type="number" name="unitId">
                             <label id="" class="form-label">Quantity</label>
                             <input class="form-control" type="number" name="quantity">
+                            <label id="" class="form-label">Category id</label>
+                            <input class="form-control" type="number" name="categoryId">
                             <label id="" class="form-label">Description</label>
                             <input class="form-control" type="text" name="description">
+                            <label class="form-label">Product Image</label>
+                            <input class="form-control" type="file" name="upload">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

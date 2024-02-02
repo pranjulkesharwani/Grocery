@@ -53,17 +53,21 @@ public class ManufacturerLogin extends HttpServlet {
             User user = new User(email, password);
 
             if (user.signInManuf()) {
-                System.out.println("+++++++++++++++++++++++++++++++++++++++++" + user.signInManuf());
+                // System.out.println("+++++++++++++++++++++++++++++++++++++++++" +
+                // user.signInManuf());
                 session.setAttribute("isLoggedin", true);
+
                 nextPage = "dashboard.jsp";
             } else {
                 request.setAttribute("signin_error", "either email or password is incorrect");
             }
         }
+        request.getRequestDispatcher(nextPage).forward(request, response);
 
         // Manufacturer manufacturer = new Manufacturer(email, password);
 
-        System.out.println("+++++++++++++++++++++ " + password + "++++++++++++++++++++++++" + email);
+        // System.out.println("+++++++++++++++++++++ " + password +
+        // "++++++++++++++++++++++++" + email);
 
         // int val = user.signInManuf();
 
@@ -75,6 +79,5 @@ public class ManufacturerLogin extends HttpServlet {
         // if (val == 1) {
         // nextPage = "dashboard.jsp";
         // }
-        request.getRequestDispatcher(nextPage).forward(request, response);
     }
 }

@@ -64,8 +64,8 @@ public class ManufacturerInServlet extends HttpServlet {
 
         System.out.println(manufacturer.getUserId());
         boolean check = manufacturer.saveUser();
-        System.out.println(check + "++++++++++++++++++++++++++++++++++++");
-        System.out.println(manufacturer.getUserId());
+        // System.out.println(check + "++++++++++++++++++++++++++++++++++++");
+        // System.out.println(manufacturer.getUserId());
         if (check) {
             flag = manufacturer.saveManufacturer();
             // flag = true;

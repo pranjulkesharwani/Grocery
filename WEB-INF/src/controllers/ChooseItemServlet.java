@@ -17,6 +17,16 @@ public class ChooseItemServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        String grocery = request.getParameter("grocery");
+        String health = request.getParameter("health");
+        String beauty = request.getParameter("beauty");
+        String personalCareApplication = request.getParameter("personalCareApplication");
+
+        System.out.println(grocery);
+        System.out.println(health);
+        System.out.println(beauty);
+        System.out.println(personalCareApplication);
+
         request.getRequestDispatcher("addproduct.jsp").forward(request, response);
     }
 }

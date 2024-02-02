@@ -22,7 +22,7 @@ public class ShowPicServlet extends HttpServlet {
         String picPath = "static/images/user.png";
         String userPic = user.getMyPic();
 
-        System.out.println("+++++++++++++++++++++++++++++++++++++" + userPic);
+        // System.out.println("+++++++++++++++++++++++++++++++++++++" + userPic);
         if (userPic != null) {
             picPath = "/WEB-INF/uploads/" + userPic;
         }

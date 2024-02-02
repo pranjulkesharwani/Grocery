@@ -32,7 +32,8 @@ public class SigninServlet extends HttpServlet {
         int statusId = user.signinUser();
 
         String nextPage = "signin.jsp";
-        System.out.println("++++++++++++++++++ SignIn Servlet +++++++++++++++++++" + statusId);
+        // System.out.println("++++++++++++++++++ SignIn Servlet +++++++++++++++++++" +
+        // statusId);
         boolean flag = false;
 
         switch (statusId) {
