@@ -40,7 +40,7 @@ public class AddProductServlet extends HttpServlet {
         String name = request.getParameter("name");
         String price = request.getParameter("price");
         String quantity = request.getParameter("quantity");
-        // Unit unit = request.getParameter("unitId");
+        String unit = request.getParameter("unitId");
         String category = request.getParameter("categoryId");
         String description = request.getParameter("description");
 

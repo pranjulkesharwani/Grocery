@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!DOCTYPE html>
+    <html lang="en">
 
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-<body>
-    <h1>Add Product Page</h1>
-    <% String grocery=(String)request.getAttribute("grocery"); %>
+    </head>
+
+    <body>
+        <h1>Add Product Page</h1>
 
         <hr>
         <div class="container">
@@ -42,8 +43,14 @@
                                 <input class="form-control" type="number" name="unitId">
                                 <label id="" class="form-label">Quantity</label>
                                 <input class="form-control" type="number" name="quantity">
-                                <label id="" class="form-label">Category id</label>
-                                <input class="form-control" type="number" name="categoryId">
+                                <label id="categoryId" class="form-label">Category id</label>
+                                <select class="form-select" id="categoryId" name="categoryId">
+                                    <c:forEach var="category" items="${categories}">
+                                        <option value="${category.categoryId}">
+                                            <c:out value="${category.name}" />
+                                        </option>
+                                    </c:forEach>
+                                </select>
                                 <label id="" class="form-label">Description</label>
                                 <input class="form-control" type="text" name="description">
                                 <label class="form-label">Product Image</label>
@@ -62,6 +69,6 @@
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"></script>
 
-</body>
+    </body>
 
-</html>
+    </html>

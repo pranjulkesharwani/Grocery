@@ -40,18 +40,18 @@ values
 create table states 
 (
     state_id int auto_increment primary key,
-    name char(50) not null,
+    name char(50) not null
     
 );
 
 create table categories 
 (
     category_id int auto_increment primary key,
-    rice char(50) not null,
-    flour char(50) not null
+    name char(100) not null
 );
 
-
+-- alter table categories modify name char(100) not null;
+insert into categories (name) value ('Grocery'), ('Beauty'), ('Health'), ('Personal Care Applicance');
 -- ############################ Tables with foreign keys ####################
 
 create table users

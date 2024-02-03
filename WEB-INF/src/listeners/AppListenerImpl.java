@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import models.City;
 import models.Country;
+import models.Category;
 
 public class AppListenerImpl implements ServletContextListener {
     public void contextInitialized(ServletContextEvent ev) {
@@ -25,6 +26,9 @@ public class AppListenerImpl implements ServletContextListener {
         ArrayList<City> cities = City.collectAllCities();
         context.setAttribute("cities", cities);
         System.out.println(cities);
+
+        ArrayList<Category> categories = Category.collectAllCategory();
+        context.setAttribute("categories", categories);
     }
 
     public void contextDestroyed(ServletContextEvent ev) {

@@ -134,13 +134,6 @@ public class User {
             String query = "insert into users (name, email, password, phone, address, country_id) value (?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 
-            // ps.setString(1, getName());
-            // ps.setString(2, getEmail());
-            // ps.setString(3, getPassword());
-            // ps.setString(4, getPhone());
-            // ps.setString(5, getAddress().getAddressLine1());
-            // ps.setInt(6, getCountry().getCountryId());
-
             ps.setString(1, name);
             ps.setString(2, email);
             ps.setString(3, spe.encryptPassword(password));
