@@ -1,5 +1,10 @@
 package models;
 
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
 public class Product {
     private Integer productId;
     private Manufacturer manufacturer;
@@ -14,6 +19,48 @@ public class Product {
 
     public Product() {
 
+    }
+
+    public Product(Manufacturer manufacturer, String name, Integer price, Unit unit,
+            Integer quantity, Category category, String description) {
+        this.manufacturer = manufacturer;
+        this.name = name;
+        this.price = price;
+        this.unit = unit;
+        this.quantity = quantity;
+        this.category = category;
+        this.description = description;
+    }
+
+    // ################################### Methods ##############################
+
+    public boolean savaProduct() {
+        boolean flag = false;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/grodb?user=root&password=1234");
+
+            String query = "insert into products (manufacture_id, name, price, unit_id, quantity, category_id, description)";
+
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setInt(1, manufacturer.getManufacturerId());
+            ps.setString(2, name);
+            ps.setInt(3, price);
+            ps.setInt(4, unit.getUnitId());
+            ps.setInt(5, quantity);
+            ps.setInt(6, category.getCategoryId());
+            ps.setString(7, description);
+
+            int val = ps.executeUpdate();
+
+            if (val == 1) {
+                flag = true;
+            }
+            con.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return flag;
     }
 
     public Integer getProductId() {

@@ -3,6 +3,7 @@ package controllers;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 
@@ -17,11 +18,14 @@ public class ChooseItemServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        HttpSession session = request.getSession();
+
         String grocery = request.getParameter("grocery");
         String health = request.getParameter("health");
         String beauty = request.getParameter("beauty");
         String personalCareApplication = request.getParameter("personalCareApplication");
 
+        // request.setAttribute("grocery", grocery);
         System.out.println(grocery);
         System.out.println(health);
         System.out.println(beauty);

@@ -6,10 +6,18 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.ArrayList;
 import java.io.File;
+
+import models.User;
+import models.Product;
+import models.Unit;
+import models.Category;
+import models.Manufacturer;
 
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -24,32 +32,24 @@ public class AddProductServlet extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        HttpSession session = request.getSession();
 
-        if (ServletFileUpload.isMultipartContent(request)) {
-            ServletContext context = getServletContext();
+        User user = (User) session.getAttribute("user");
 
-            try {
-                List<FileItem> list = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
-                String uploadPath = context.getRealPath("/WEB-INF/uploads");
+        String manufacturer = request.getParameter("man");
+        String name = request.getParameter("name");
+        String price = request.getParameter("price");
+        String quantity = request.getParameter("quantity");
+        // Unit unit = request.getParameter("unitId");
+        String category = request.getParameter("categoryId");
+        String description = request.getParameter("description");
 
-                for (FileItem item : list) {
-                    if (item.isFormField()) {
+        // String forwardPage = "manufacturer_login.jsp";
 
-                        System.out.println("productName");
-                        System.out.println("quantity");
-                        System.out.println("description");
-                    } else {
-                        File file = new File(uploadPath, item.getName());
-                        try {
-                            item.write(file);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            } catch (FileUploadException e) {
-                e.printStackTrace();
-            }
+        if (user != null) {
+            // Product product = new Product(manufacturer, name, price, unit, quantity,
+            // category, description);
+            // product.saveProduct();
         }
 
         request.getRequestDispatcher("addproduct.jsp").forward(request, response);
