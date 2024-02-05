@@ -35,21 +35,33 @@ public class AddProductServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         User user = (User) session.getAttribute("user");
+        Manufacturer manufacturer = (Manufacturer) session.getAttribute("manufacturer");
+        // String manufacturer = request.getParameter("user");
+        System.out.print(manufacturer + "++++++++++++++++++++++manufacturer+++++++++++++++");
+        Integer manufacturerId = manufacturer.getManufacturerId();
+        System.out.print(manufacturerId + "+++++++++++++++++++++++++manufacturerId++++++++++++");
 
-        String manufacturer = request.getParameter("man");
         String name = request.getParameter("name");
-        String price = request.getParameter("price");
-        String quantity = request.getParameter("quantity");
-        String unit = request.getParameter("unitId");
-        String category = request.getParameter("categoryId");
+        Integer price = Integer.parseInt(request.getParameter("price"));
+        Integer quantity = Integer.parseInt(request.getParameter("quantity"));
+        Integer unitId = Integer.parseInt(request.getParameter("unitId"));
+        Integer categoryId = Integer.parseInt(request.getParameter("categoryId"));
         String description = request.getParameter("description");
 
         // String forwardPage = "manufacturer_login.jsp";
+        System.out.println(user + "++++++user+++++++++++++++++++++++++++++++++++");
+        System.out.println(manufacturer + "++++++manufacturer+++++++++++++++++++++++++++++++++++");
 
         if (user != null) {
-            // Product product = new Product(manufacturer, name, price, unit, quantity,
-            // category, description);
-            // product.saveProduct();
+            // public Product(Manufacturer manufacturer, String name, Integer price, Unit
+            // unit,
+            // Integer quantity, Category category, String description)
+            Product product = new Product(new Manufacturer(manufacturerId), name, price, new Unit(unitId), quantity,
+                    new Category(categoryId), description);
+            System.out.println(product + "+++++++++++++++++++++++++++++++++++++");
+            boolean flag = product.saveProduct();
+
+            System.out.println(flag + "+++++++++++++++++++++++++++++++++++++");
         }
 
         request.getRequestDispatcher("addproduct.jsp").forward(request, response);

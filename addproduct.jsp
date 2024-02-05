@@ -24,7 +24,7 @@
                     </button>
                 </div>
             </div>
-            <form action="addproduct.do" method="post" enctype="multipart/form-data">
+            <form action="addproduct.do" method="post">
                 <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -40,7 +40,14 @@
                                 <label id="" class="form-label">Price</label>
                                 <input class="form-control" type="number" name="price">
                                 <label id="" class="form-label">Unit id</label>
-                                <input class="form-control" type="number" name="unitId">
+                                <select class="form-select" name="unitId" id="unitId">
+                                    <c:forEach var="unit" items="${units}">
+                                        <option value="${unit.unitId}">
+                                            <c:out value="${unit.gram}" />
+                                        </option>
+                                    </c:forEach>
+                                </select>
+                                <!-- <input class="form-control" type="number" name="unitId"> -->
                                 <label id="" class="form-label">Quantity</label>
                                 <input class="form-control" type="number" name="quantity">
                                 <label id="categoryId" class="form-label">Category id</label>
@@ -51,10 +58,10 @@
                                         </option>
                                     </c:forEach>
                                 </select>
-                                <label id="" class="form-label">Description</label>
-                                <input class="form-control" type="text" name="description">
-                                <label class="form-label">Product Image</label>
-                                <input class="form-control" type="file" name="upload">
+                                <label id="description" class="form-label">Description</label>
+                                <input class="form-control" type="text" name="description" for="description">
+                                <!-- <label class="form-label">Product Image</label> -->
+                                <!-- <input class="form-control" type="file" name="upload"> -->
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

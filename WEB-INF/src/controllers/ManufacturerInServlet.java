@@ -68,6 +68,8 @@ public class ManufacturerInServlet extends HttpServlet {
         // System.out.println(manufacturer.getUserId());
         if (check) {
             flag = manufacturer.saveManufacturer();
+            session.setAttribute("manufacturer", manufacturer);
+            System.out.println("+++++++++++++++++++++++++++++++++=manufacturer register+++++" + manufacturer);
             // flag = true;
         }
         request.getRequestDispatcher("dashboard.jsp").forward(request, response);

@@ -21,6 +21,10 @@ create table units
     unit_id int auto_increment primary key,
     type char(5) not null
 );
+
+alter table units change type grams int(30);
+
+alter table units change grams gram char(30);
 -- ##################Status ##########################
 create table status 
 (

@@ -26,6 +26,10 @@ public class Manufacturer extends User {
 
     }
 
+    public Manufacturer(Integer manufacturerId) {
+        this.manufacturerId = manufacturerId;
+    }
+
     // public Manufacturer(String name, String password) {
     // super(name, password);
     // }

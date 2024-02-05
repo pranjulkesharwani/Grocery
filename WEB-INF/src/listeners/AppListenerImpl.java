@@ -7,6 +7,7 @@ import javax.servlet.ServletContext;
 
 import java.util.ArrayList;
 
+import models.Unit;
 import models.City;
 import models.Country;
 import models.Category;
@@ -29,6 +30,9 @@ public class AppListenerImpl implements ServletContextListener {
 
         ArrayList<Category> categories = Category.collectAllCategory();
         context.setAttribute("categories", categories);
+
+        ArrayList<Unit> units = Unit.collectAllUnit();
+        context.setAttribute("units", units);
     }
 
     public void contextDestroyed(ServletContextEvent ev) {

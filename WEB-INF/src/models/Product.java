@@ -34,7 +34,7 @@ public class Product {
 
     // ################################### Methods ##############################
 
-    public boolean savaProduct() {
+    public boolean saveProduct() {
         boolean flag = false;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -51,6 +51,7 @@ public class Product {
             ps.setInt(6, category.getCategoryId());
             ps.setString(7, description);
 
+            System.out.println(ps);
             int val = ps.executeUpdate();
 
             if (val == 1) {
