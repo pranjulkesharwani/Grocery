@@ -37,9 +37,9 @@ public class AddProductServlet extends HttpServlet {
         User user = (User) session.getAttribute("user");
         Manufacturer manufacturer = (Manufacturer) session.getAttribute("manufacturer");
         // String manufacturer = request.getParameter("user");
-        System.out.print(manufacturer + "++++++++++++++++++++++manufacturer+++++++++++++++");
+        System.out.println(manufacturer + "++++++++++++++++++++++manufacturer+++++++++++++++");
         Integer manufacturerId = manufacturer.getManufacturerId();
-        System.out.print(manufacturerId + "+++++++++++++++++++++++++manufacturerId++++++++++++");
+        System.out.println(manufacturerId + "+++++++++++++++++++++++++manufacturerId++++++++++++");
 
         String name = request.getParameter("name");
         Integer price = Integer.parseInt(request.getParameter("price"));

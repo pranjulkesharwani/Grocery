@@ -25,7 +25,8 @@ public class ManufacturerLogin extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
-        Manufacturer manufacturer = (Manufacturer) session.getAttribute("manufacturer");
+        // Manufacturer manufacturer = (Manufacturer)
+        // session.getAttribute("manufacturer");
 
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -51,14 +52,16 @@ public class ManufacturerLogin extends HttpServlet {
         String nextPage = "manufacturer_login.jsp";
 
         if (flag1 && flag2) {
-            User user = new User(email, password);
+            // User user = new User(email, password);
+            Manufacturer manufacturer = (Manufacturer) new User(email, password);
 
-            if (user.signInManuf()) {
+            if (manufacturer.signInManuf()) {
                 // System.out.println("+++++++++++++++++++++++++++++++++++++++++" +
                 // user.signInManuf());
                 session.setAttribute("isLoggedin", true);
+                // session.setAttribute("user", user);
                 session.setAttribute("manufacturer", manufacturer);
-                System.out.println("+++++++++++++++++++++++++++++++++manfacturer login+++++" + manufacturer);
+                System.out.println("+++++++++++++++++++++++++++++++++manfacturer login+++++++++" + manufacturer);
                 nextPage = "dashboard.jsp";
             } else {
                 request.setAttribute("signin_error", "either email or password is incorrect");
