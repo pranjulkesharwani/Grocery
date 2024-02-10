@@ -53,7 +53,7 @@ public class ManufacturerLogin extends HttpServlet {
 
         if (flag1 && flag2) {
             // User user = new User(email, password);
-            Manufacturer manufacturer = (Manufacturer) new User(email, password);
+            Manufacturer manufacturer = new Manufacturer(email, password);
 
             if (manufacturer.signInManuf()) {
                 // System.out.println("+++++++++++++++++++++++++++++++++++++++++" +

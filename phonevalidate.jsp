@@ -22,7 +22,7 @@
         ${map.email}
         ${map.password} -->
 
-        <hr>
+        <!-- <hr> -->
         <div class="container">
             <form action="register_manufact.do" method="post">
                 <label for="phone" class="form-label">Contact Number</label>

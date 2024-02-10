@@ -15,7 +15,7 @@
             <h4>Best Sellers</h4>
             <div class="col-md-3">
                 <div class="card ca" style="width: 18rem;">
-                    <img src="static/images/s1.png" class="card-img-top" alt="...">
+                    <a href="s1.do"><img src="static/images/s1.png" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <p class="mb-0" style="color:rgb(165, 163, 163)">Fresho</p>
                         <h5 class="card-title">Onion</h5>

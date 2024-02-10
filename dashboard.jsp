@@ -29,16 +29,17 @@
                 <div class=" col-3">
                     <h5 class="mt-2">Beauty, Health & Groceries</h5>
                     <div class="input-group ms-2">
-                        <input class="form-check-input mt-2" type="checkbox" name="grocery" value="grocery">
+                        <input class="form-check-input mt-2" type="checkbox" name="grocery" value="grocery"
+                            id="grocery">
                         <div>
-                            <span class="mx-2">Grocery</span>
+                            <span class="mx-2" for="grocery">Grocery</span>
                         </div>
                     </div>
 
                     <div class="input-group ms-2">
-                        <input class="form-check-input mt-2" type="checkbox" name="health" value="health">
+                        <input class="form-check-input mt-2" type="checkbox" name="health" value="health" id="health">
                         <div>
-                            <span class="mx-2">Health</span>
+                            <span class="mx-2" for="health">Health</span>
                         </div>
                     </div>
                     <div class="input-group ms-2">
